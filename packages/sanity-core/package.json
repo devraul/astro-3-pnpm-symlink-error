@@ -9,7 +9,7 @@
     "dist/"
   ],
   "scripts": {
-    "prepare": "turbo --filter sanity-core build --output-logs errors-only",
+    "prepare": "pnpm -F sanity-core run build",
     "build": "vite build"
   },
   "dependencies": {
