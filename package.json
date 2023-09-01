@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "pnpm -F website... run build",
-    "dev": "pnpm -F website run dev"
+    "dev": "pnpm -F website run dev --host"
   },
   "devDependencies": {
     "@raulmelo/eslint-config": "workspace:*",
