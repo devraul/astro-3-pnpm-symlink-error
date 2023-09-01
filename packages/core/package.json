@@ -35,7 +35,7 @@
   "scripts": {
     "prepare": "pnpm -F core run build",
     "clean": "rm -rf dist/",
-    "build": "pnpm run clean && pnpm run vite build && pnpm run tsc",
+    "build": "pnpm run clean && pnpm vite build && pnpm tsc",
     "lint": "eslint .",
     "dev": "scripty"
   },
