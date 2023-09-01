@@ -3,13 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "check": "turbo run check",
-    "deploy": "turbo run deploy",
-    "test": "turbo run test",
-    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
+    "build": "pnpm -F website... run build",
+    "dev": "pnpm -F website... run dev"
   },
   "devDependencies": {
     "@raulmelo/eslint-config": "workspace:*",
