@@ -34,11 +34,10 @@
   "types": "./index.d.ts",
   "scripts": {
     "prepare": "pnpm -F core run build",
-    "clean": "scripty",
-    "build": "scripty",
+    "clean": "rm -rf dist/",
+    "build": "pnpm run clean && pnpm run vite build && pnpm run tsc",
     "lint": "eslint .",
-    "dev": "scripty",
-    "test": "scripty"
+    "dev": "scripty"
   },
   "dependencies": {
     "@sanity/block-content-to-markdown": "0.0.5",
