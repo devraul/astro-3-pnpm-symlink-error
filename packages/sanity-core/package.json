@@ -1,0 +1,33 @@
+{
+  "name": "@raulmelo/sanity-core",
+  "private": true,
+  "version": "0.0.0-development",
+  "type": "module",
+  "module": "dist/sanity-core.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "prepare": "turbo --filter sanity-core build --output-logs errors-only",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "2.32.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "sanity": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sanity": "3.15.1",
+    "typescript": "5.1.6",
+    "vite": "4.4.9",
+    "vite-plugin-dts": "3.5.2"
+  }
+}

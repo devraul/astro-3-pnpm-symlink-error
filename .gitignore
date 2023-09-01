@@ -1,0 +1,14 @@
+node_modules
+.history/
+
+.env
+
+.vercel
+.DS_Store
+apps/website/tsconfig.tsbuildinfo
+
+coverage
+
+*.typegen.ts
+
+.turbo/

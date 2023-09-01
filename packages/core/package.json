@@ -1,0 +1,67 @@
+{
+  "private": true,
+  "name": "@raulmelo/core",
+  "version": "2.0.0",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts",
+    "config.d.ts",
+    "domains.d.ts",
+    "utils.d.ts",
+    "scripts.d.ts",
+    "types"
+  ],
+  "exports": {
+    "./domains": {
+      "require": "./dist/domains/index.cjs",
+      "default": "./dist/domains/index.js"
+    },
+    "./utils": {
+      "require": "./dist/utils/index.cjs",
+      "default": "./dist/utils/index.js"
+    },
+    "./config": {
+      "require": "./dist/config/index.cjs",
+      "default": "./dist/config/index.js"
+    },
+    "./scripts": {
+      "require": "./dist/scripts/index.cjs",
+      "default": "./dist/scripts/index.js"
+    }
+  },
+  "types": "./index.d.ts",
+  "scripts": {
+    "prepare": "turbo --filter='core' build --output-logs errors-only",
+    "clean": "scripty",
+    "build": "scripty",
+    "lint": "eslint .",
+    "dev": "scripty",
+    "test": "scripty"
+  },
+  "dependencies": {
+    "@sanity/block-content-to-markdown": "0.0.5",
+    "@sanity/client": "6.4.9",
+    "@sanity/image-url": "1.0.2",
+    "groq": "3.15.1",
+    "prettier": "3.0.2",
+    "zod": "3.21.4"
+  },
+  "devDependencies": {
+    "@portabletext/types": "2.0.6",
+    "@raulmelo/eslint-config": "workspace:*",
+    "@types/node": "18.16.19",
+    "@types/ramda": "0.29.3",
+    "eslint": "8.45.0",
+    "eslint-plugin-node": "11.1.0",
+    "globals": "13.20.0",
+    "ramda": "0.29.0",
+    "typescript": "5.1.6",
+    "vite": "4.4.9",
+    "vitest": "0.34.3"
+  },
+  "scripty": {
+    "path": "./scripts"
+  }
+}

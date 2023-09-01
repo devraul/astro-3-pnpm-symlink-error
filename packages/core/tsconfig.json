@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "preserve",
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "target": "esnext",
+    "declaration": true,
+    "declarationDir": "./dist",
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "declarationMap": true,
+    "paths": {
+      "@/config": [
+        "src/config/index.ts"
+      ],
+      "@/utils": [
+        "./src/utils/index.ts"
+      ],
+      "@/domains": [
+        "./src/domains/index.ts"
+      ],
+      "@/scripts/*": [
+        "./src/scripts/index.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/**/*.spec.ts",
+    "src/**/*.test.*",
+    "vite.config.ts"
+  ]
+}
