@@ -1,9 +1,10 @@
+// import vercel from '@astrojs/vercel/serverless';
+import node from '@astrojs/node';
 import partytown from '@astrojs/partytown';
 import prefetch from '@astrojs/prefetch';
 import react from '@astrojs/react';
 import svelte from '@astrojs/svelte';
 import tailwind from '@astrojs/tailwind';
-import vercel from '@astrojs/vercel/serverless';
 import { defineConfig, sharpImageService } from 'astro/config';
 import robotsTxt from 'astro-robots-txt';
 import { resolve } from 'import-meta-resolve';
@@ -56,15 +57,18 @@ const config = defineConfig({
     prefetch(),
     svelte(),
   ],
-  adapter: vercel({
-    functionPerRoute: true,
-    analytics: true,
-    includeFiles: [vscodeOnigurumaPath],
-    imageService: true,
-    imagesConfig: {
-      domains: assetsDomains,
-      sizes: [320, 640, 768, 1024, 1280],
-    },
+  // adapter: vercel({
+  //   functionPerRoute: true,
+  //   analytics: true,
+  //   includeFiles: [vscodeOnigurumaPath],
+  //   imageService: true,
+  //   imagesConfig: {
+  //     domains: assetsDomains,
+  //     sizes: [320, 640, 768, 1024, 1280],
+  //   },
+  // }),
+  adapter: node({
+    mode: 'standalone',
   }),
   vite: {
     ssr: {
